@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const personalMessageInput = document.getElementById('personalMessage') ;
       const courseNameInput = document.getElementById('courseName') ; 
   
-      const studentName = studentNameInput.value;
+      const studentName = studentNameInput.value.toUpperCase();
       const personalMessage = personalMessageInput.value;
-      const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+      const courseName = courseNameInput ? courseNameInput.value.toUpperCase() : "a course"; // Fallback to "a course" if no input
   
       if (studentName.trim() === '' || personalMessage.trim() === '') {
         alert('Please fill in all fields');
